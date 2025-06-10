@@ -28,12 +28,6 @@ This is a **Java-based GUI** project to manage core library operations such as:
 3. Update DB credentials in `DBConnection.java`
 4. Run `LibraryUI.java`
 
-## Author 
 
-- **Raushan Tiwari**
-
----
-
-### License
 
 This project is for educational purposes only.
