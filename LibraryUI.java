@@ -73,3 +73,24 @@ public class LibraryUI extends JFrame {
         new LibraryUI();
     }
 }
+String title = titleField.getText().trim();
+String author = authorField.getText().trim();
+String quantityText = quantityField.getText().trim();
+
+//Validation
+if (title.isEmpty() || author.isEmpty() || quantityText.isEmpty()) {
+    JOptionPane.showMessageDialog(null, "All fields are required!");
+    return;
+}
+
+int quantity;
+try {
+    quantity = Integer.parseInt(quantityText);
+    if (quantity < 0) {
+        JOptionPane.showMessageDialog(null, "Quantity must be positive!");
+        return;
+    }
+} catch (NumberFormatException ex) {
+    JOptionPane.showMessageDialog(null, "Quantity must be a number!");
+    return;
+}
