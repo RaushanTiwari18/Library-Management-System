@@ -13,3 +13,10 @@ public class DBConnection {
         }
     }
 }
+try {
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    return DriverManager.getConnection("jdbc:mysql://localhost:3306/library_db", "root", "");
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage());
+    return null;
+}
