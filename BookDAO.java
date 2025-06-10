@@ -38,3 +38,7 @@ public class BookDAO {
         }
     }
 }
+try {
+} catch (SQLException e) {
+    JOptionPane.showMessageDialog(null, "Failed to add book: " + e.getMessage());
+}
